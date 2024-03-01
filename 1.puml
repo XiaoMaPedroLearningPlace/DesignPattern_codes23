@@ -1,0 +1,77 @@
+@startuml
+class com.java.jikexueyuan.facademode.hometheater.Popcorn {
+- {static} Popcorn instance
++ {static} Popcorn getInstance()
++ void on()
++ void off()
++ void pop()
+}
+
+
+class com.java.jikexueyuan.facademode.hometheater.Projector {
+- int size
+- {static} Projector instance
++ {static} Projector getInstance()
++ void on()
++ void off()
++ void focus()
++ void zoom(int)
+}
+
+
+class com.java.jikexueyuan.facademode.hometheater.TheaterLights {
+- {static} TheaterLights instance
++ {static} TheaterLights getInstance()
++ void on()
++ void off()
++ void dim(int)
++ void bright()
+}
+
+
+class com.java.jikexueyuan.facademode.hometheater.HomeTheaterFacade {
+- TheaterLights mTheaterLights
+- Popcorn mPopcorn
+- Stereo mStereo
+- Projector mProjector
+- Screen mScreen
+- DVDPlayer mDVDPlayer
++ void ready()
++ void end()
++ void play()
++ void pause()
+}
+
+
+class com.java.jikexueyuan.facademode.hometheater.DVDPlayer {
+- {static} DVDPlayer instance
++ {static} DVDPlayer getInstance()
++ void on()
++ void off()
++ void play()
++ void pause()
++ void setdvd()
+}
+
+
+class com.java.jikexueyuan.facademode.hometheater.Screen {
+- {static} Screen instance
++ {static} Screen getInstance()
++ void up()
++ void down()
+}
+
+
+class com.java.jikexueyuan.facademode.hometheater.Stereo {
+- {static} Stereo instance
+- int volume
++ {static} Stereo getInstance()
++ void on()
++ void off()
++ void setVolume(int)
++ void addVolume()
++ void subVolume()
+}
+
+
+@enduml
