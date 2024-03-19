@@ -1,4 +1,6 @@
-package com.java.jikexueyuan.protomode;
+package com.java.jikexueyuan.protomode.oo;
+
+import com.java.jikexueyuan.protomode.EventTemplate;
 
 import java.util.Random;
 
